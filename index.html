@@ -1,12 +1,225 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Test Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shantkumar - Cyber Crime Investigation</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background: #f4f7fb;
+            color: #222;
+        }
+
+        header {
+            background: #0b1f3a;
+            color: white;
+            padding: 25px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 26px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #0b1f3a, #1769aa);
+            color: white;
+            text-align: center;
+            padding: 90px 20px;
+        }
+
+        .hero h2 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 25px;
+            background: white;
+            color: #0b1f3a;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 60px 8%;
+        }
+
+        section h2 {
+            text-align: center;
+            margin-bottom: 35px;
+            color: #0b1f3a;
+        }
+
+        .about {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+        }
+
+        .card h3 {
+            color: #1769aa;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background: #0b1f3a;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 5px;
+            }
+
+            .hero h2 {
+                font-size: 32px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Hello Shantkumar!</h1>
-    <p>This is my first website.</p>
-    <p>I am learning web development.</p>
+
+    <header>
+        <h1>Shantkumar</h1>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h2>Cyber Crime Investigation</h2>
+
+        <p>
+            Welcome to my personal website.
+            Learning and exploring Cyber Crime Investigation,
+            Digital Forensics, Networking and Technology.
+        </p>
+
+        <a class="button" href="#about">Learn More</a>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+
+        <div class="about">
+            <p>
+                Hello, I am Shantkumar.
+                This website is created as a learning project
+                to develop my knowledge of web development,
+                cybersecurity and digital investigation.
+            </p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Areas of Learning</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Cyber Crime</h3>
+                <p>
+                    Learning cyber crime investigation,
+                    online fraud investigation and digital evidence.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Digital Forensics</h3>
+                <p>
+                    Learning digital evidence collection,
+                    analysis and forensic investigation concepts.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Networking</h3>
+                <p>
+                    Learning TCP/IP, DNS, HTTP/HTTPS,
+                    IP addresses, ports and network analysis.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Web Development</h3>
+                <p>
+                    Learning HTML, CSS, JavaScript
+                    and website development.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+
+        <div class="about">
+            <p>
+                This website is currently a learning project.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Shantkumar. All Rights Reserved.</p>
+    </footer>
+
 </body>
 </html>
