@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shantkumar - Cyber Crime Investigation</title>
+
+    <title>Shantkumar | Cyber Crime Investigation</title>
 
     <style>
         * {
@@ -12,118 +13,190 @@
             padding: 0;
         }
 
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background: #f4f7fb;
-            color: #222;
+        html {
+            scroll-behavior: smooth;
         }
 
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        /* NAVIGATION */
         header {
-            background: #0b1f3a;
+            background: #071d38;
             color: white;
-            padding: 25px 8%;
+            padding: 18px 7%;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
-        header h1 {
+        .logo {
             font-size: 26px;
+            font-weight: bold;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin-left: 20px;
+            margin-left: 25px;
+            font-size: 16px;
         }
 
         nav a:hover {
-            text-decoration: underline;
+            color: #4db8ff;
         }
 
+        /* HERO */
         .hero {
-            background: linear-gradient(135deg, #0b1f3a, #1769aa);
-            color: white;
+            min-height: 520px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
-            padding: 90px 20px;
+            padding: 60px 20px;
+
+            background:
+                linear-gradient(
+                    rgba(7, 29, 56, 0.95),
+                    rgba(12, 83, 130, 0.92)
+                );
+            color: white;
         }
 
-        .hero h2 {
-            font-size: 42px;
-            margin-bottom: 15px;
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #4db8ff;
         }
 
         .hero p {
             font-size: 20px;
-            max-width: 700px;
-            margin: auto;
+            margin-bottom: 30px;
         }
 
         .button {
             display: inline-block;
-            margin-top: 25px;
-            padding: 12px 25px;
             background: white;
-            color: #0b1f3a;
-            text-decoration: none;
+            color: #071d38;
+            padding: 13px 28px;
             border-radius: 6px;
+            text-decoration: none;
             font-weight: bold;
+            margin: 5px;
         }
 
+        .button:hover {
+            background: #4db8ff;
+            color: white;
+        }
+
+        /* SECTIONS */
         section {
-            padding: 60px 8%;
+            padding: 70px 7%;
         }
 
         section h2 {
             text-align: center;
+            color: #071d38;
+            font-size: 32px;
             margin-bottom: 35px;
-            color: #0b1f3a;
         }
 
+        /* ABOUT */
         .about {
-            max-width: 800px;
+            max-width: 900px;
             margin: auto;
             text-align: center;
+            font-size: 18px;
         }
 
-        .cards {
+        /* TOPICS */
+        .topics {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
+            gap: 22px;
         }
 
         .card {
             background: white;
             padding: 25px;
             border-radius: 10px;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card .icon {
+            font-size: 40px;
+            margin-bottom: 12px;
         }
 
         .card h3 {
-            color: #1769aa;
+            color: #0b4f7c;
             margin-bottom: 10px;
         }
 
+        /* LEARNING */
+        .learning {
+            background: #eaf3fa;
+        }
+
+        .learning p {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        /* FOOTER */
         footer {
-            background: #0b1f3a;
+            background: #071d38;
             color: white;
             text-align: center;
             padding: 25px;
         }
 
-        @media (max-width: 600px) {
+        /* MOBILE */
+        @media (max-width: 700px) {
+
             header {
                 flex-direction: column;
-                gap: 15px;
+                gap: 12px;
             }
 
             nav a {
-                margin: 5px;
+                margin: 0 7px;
+                font-size: 14px;
             }
 
-            .hero h2 {
-                font-size: 32px;
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            section {
+                padding: 50px 5%;
             }
         }
     </style>
@@ -131,94 +204,208 @@
 
 <body>
 
+    <!-- NAVIGATION -->
     <header>
-        <h1>Shantkumar</h1>
+
+        <div class="logo">
+            Shantkumar
+        </div>
 
         <nav>
             <a href="#home">Home</a>
             <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
+            <a href="#topics">Topics</a>
+            <a href="#learning">Learning</a>
         </nav>
+
     </header>
 
+
+    <!-- HOME -->
     <section class="hero" id="home">
-        <h2>Cyber Crime Investigation</h2>
 
-        <p>
-            Welcome to my personal website.
-            Learning and exploring Cyber Crime Investigation,
-            Digital Forensics, Networking and Technology.
-        </p>
+        <div class="hero-content">
 
-        <a class="button" href="#about">Learn More</a>
+            <h1>
+                Cyber Crime <span>Investigation</span>
+            </h1>
+
+            <p>
+                Learning and exploring Cyber Crime Investigation,
+                Digital Forensics, Networking and Technology.
+            </p>
+
+            <a href="#topics" class="button">
+                Explore Topics
+            </a>
+
+            <a href="#about" class="button">
+                About Me
+            </a>
+
+        </div>
+
     </section>
 
+
+    <!-- ABOUT -->
     <section id="about">
+
         <h2>About Me</h2>
 
         <div class="about">
+
             <p>
-                Hello, I am Shantkumar.
-                This website is created as a learning project
-                to develop my knowledge of web development,
-                cybersecurity and digital investigation.
+                Welcome to my learning website.
             </p>
+
+            <br>
+
+            <p>
+                This website is created to organize and learn
+                concepts related to Cyber Crime Investigation,
+                Digital Forensics, Networking, Mobile Forensics,
+                APK Analysis and Cryptocurrency Investigation.
+            </p>
+
+            <br>
+
+            <p>
+                The goal is to develop practical knowledge of
+                modern digital investigation techniques and
+                technology.
+            </p>
+
         </div>
+
     </section>
 
-    <section id="skills">
-        <h2>Areas of Learning</h2>
 
-        <div class="cards">
+    <!-- TOPICS -->
+    <section id="topics">
 
-            <div class="card">
-                <h3>Cyber Crime</h3>
-                <p>
-                    Learning cyber crime investigation,
-                    online fraud investigation and digital evidence.
-                </p>
-            </div>
+        <h2>Cyber Investigation Topics</h2>
+
+        <div class="topics">
 
             <div class="card">
-                <h3>Digital Forensics</h3>
-                <p>
-                    Learning digital evidence collection,
-                    analysis and forensic investigation concepts.
-                </p>
-            </div>
-
-            <div class="card">
+                <div class="icon">🌐</div>
                 <h3>Networking</h3>
                 <p>
-                    Learning TCP/IP, DNS, HTTP/HTTPS,
-                    IP addresses, ports and network analysis.
+                    Learn IP addresses, TCP, UDP, DNS,
+                    ports, protocols and network fundamentals.
                 </p>
             </div>
+
 
             <div class="card">
-                <h3>Web Development</h3>
+                <div class="icon">📊</div>
+                <h3>CDR & IPDR</h3>
                 <p>
-                    Learning HTML, CSS, JavaScript
-                    and website development.
+                    Learn concepts related to CDR,
+                    IPDR, subscriber information and
+                    network data analysis.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <div class="icon">📱</div>
+                <h3>Mobile Forensics</h3>
+                <p>
+                    Explore mobile device investigation,
+                    digital evidence and forensic concepts.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <div class="icon">🧪</div>
+                <h3>APK Analysis</h3>
+                <p>
+                    Learn Android application structure,
+                    static analysis and dynamic analysis.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <div class="icon">🔐</div>
+                <h3>Digital Forensics</h3>
+                <p>
+                    Learn digital evidence, forensic
+                    acquisition and analysis concepts.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <div class="icon">₿</div>
+                <h3>Crypto Investigation</h3>
+                <p>
+                    Learn blockchain fundamentals,
+                    wallet addresses and transaction analysis.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <div class="icon">💻</div>
+                <h3>Cyber Crime</h3>
+                <p>
+                    Study common cyber crime methods,
+                    digital evidence and investigation concepts.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <div class="icon">🛠️</div>
+                <h3>Investigation Tools</h3>
+                <p>
+                    Learn about commonly used forensic,
+                    network and investigation tools.
                 </p>
             </div>
 
         </div>
+
     </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
 
-        <div class="about">
-            <p>
-                This website is currently a learning project.
-            </p>
-        </div>
+    <!-- LEARNING -->
+    <section class="learning" id="learning">
+
+        <h2>My Learning Journey</h2>
+
+        <p>
+            I am continuously learning Cyber Crime Investigation,
+            Networking, Digital Forensics, Mobile Forensics,
+            APK Analysis and Cryptocurrency Investigation.
+        </p>
+
+        <br>
+
+        <p>
+            This website will gradually contain structured
+            notes, examples, tools, commands and learning
+            resources.
+        </p>
+
     </section>
 
+
+    <!-- FOOTER -->
     <footer>
-        <p>© 2026 Shantkumar. All Rights Reserved.</p>
+
+        <p>
+            © 2026 Shantkumar | Cyber Crime Investigation Learning Portal
+        </p>
+
+        <p>
+            For educational and lawful investigative purposes.
+        </p>
+
     </footer>
 
 </body>
