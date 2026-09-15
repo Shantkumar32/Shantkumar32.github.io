@@ -1,1 +1,549 @@
-CDR & IPDR
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CDR & IPDR - Cyber Investigation</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background: #f4f7fb;
+            color: #222;
+        }
+
+        header {
+            background: #0b1f3a;
+            color: white;
+            padding: 22px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h2 {
+            margin: 0;
+        }
+
+        .back-button {
+            background: #1479c9;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+        }
+
+        .hero {
+            background: linear-gradient(120deg, #0b3158, #1769a3);
+            color: white;
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 20px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 40px auto;
+        }
+
+        .topic {
+            background: white;
+            margin-bottom: 25px;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .topic h2 {
+            color: #0868b5;
+            margin-bottom: 12px;
+        }
+
+        .topic h3 {
+            color: #12395c;
+            margin-top: 18px;
+            margin-bottom: 8px;
+        }
+
+        .topic p {
+            margin-bottom: 10px;
+        }
+
+        .topic ul {
+            margin-left: 25px;
+        }
+
+        .example {
+            background: #eef6ff;
+            padding: 15px;
+            border-left: 5px solid #1479c9;
+            margin-top: 15px;
+            border-radius: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background: #0b3158;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background: #f5f8fb;
+        }
+
+        .workflow {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .step {
+            background: #f1f7fc;
+            padding: 18px;
+            text-align: center;
+            border-radius: 8px;
+            border: 1px solid #d8e7f3;
+        }
+
+        .step strong {
+            display: block;
+            color: #0868b5;
+            margin-bottom: 8px;
+        }
+
+        footer {
+            background: #0b1f3a;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 700px) {
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <h2>Shantkumar</h2>
+
+    <a href="index.html" class="back-button">
+        ← Back to Home
+    </a>
+
+</header>
+
+
+<section class="hero">
+
+    <h1>CDR & IPDR Investigation</h1>
+
+    <p>
+        Learn Call Detail Records, IP Detail Records and network data analysis
+    </p>
+
+</section>
+
+
+<div class="container">
+
+
+    <div class="topic">
+
+        <h2>1. What is CDR?</h2>
+
+        <p>
+            CDR stands for <strong>Call Detail Record</strong>.
+            It contains information about telecommunications activity such as
+            calls and SMS. A CDR normally contains metadata rather than the
+            actual conversation content.
+        </p>
+
+        <h3>Common CDR Fields</h3>
+
+        <ul>
+            <li>Calling number / A-Party</li>
+            <li>Called number / B-Party</li>
+            <li>Date and time</li>
+            <li>Call duration</li>
+            <li>Call type</li>
+            <li>IMEI</li>
+            <li>IMSI</li>
+            <li>Cell ID</li>
+            <li>LAC / TAC</li>
+            <li>Network/operator information</li>
+        </ul>
+
+    </div>
+
+
+    <div class="topic">
+
+        <h2>2. What is IPDR?</h2>
+
+        <p>
+            IPDR stands for <strong>Internet Protocol Detail Record</strong>.
+            It is network-related metadata that can help associate internet
+            activity with a subscriber or connection, subject to the records
+            provided by the service provider.
+        </p>
+
+        <h3>Common IPDR Fields</h3>
+
+        <ul>
+            <li>Subscriber/User ID</li>
+            <li>Public IP address</li>
+            <li>Source IP</li>
+            <li>Destination IP</li>
+            <li>Source port</li>
+            <li>Destination port</li>
+            <li>Protocol</li>
+            <li>Start time</li>
+            <li>End time</li>
+            <li>Upload volume</li>
+            <li>Download volume</li>
+        </ul>
+
+    </div>
+
+
+    <div class="topic">
+
+        <h2>3. CDR vs IPDR</h2>
+
+        <table>
+
+            <tr>
+                <th>CDR</th>
+                <th>IPDR</th>
+            </tr>
+
+            <tr>
+                <td>Primarily telecom call/SMS activity</td>
+                <td>Primarily internet/network activity</td>
+            </tr>
+
+            <tr>
+                <td>MSISDN is commonly important</td>
+                <td>IP address and subscriber/session information are important</td>
+            </tr>
+
+            <tr>
+                <td>IMEI/IMSI may be available</td>
+                <td>Ports and protocols may be available</td>
+            </tr>
+
+            <tr>
+                <td>Cell information may be available</td>
+                <td>Destination IP information may be available</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+
+    <div class="topic">
+
+        <h2>4. Important Subscriber Identifiers</h2>
+
+        <h3>MSISDN</h3>
+
+        <p>
+            MSISDN generally refers to the subscriber's telephone number.
+        </p>
+
+        <h3>IMSI</h3>
+
+        <p>
+            IMSI is an identifier associated with a mobile subscriber identity.
+        </p>
+
+        <h3>IMEI</h3>
+
+        <p>
+            IMEI identifies a mobile device/equipment.
+        </p>
+
+        <div class="example">
+
+            <strong>Investigation concept:</strong>
+
+            A telephone number, subscriber record and device identifier can
+            provide different pieces of information and should not be treated
+            as interchangeable identifiers.
+
+        </div>
+
+    </div>
+
+
+    <div class="topic">
+
+        <h2>5. IP Address Analysis</h2>
+
+        <p>
+            An IP address identifies a network endpoint or interface. During
+            network-data analysis, investigators may examine the relationship
+            between subscriber information, timestamps, source IP, destination
+            IP and ports.
+        </p>
+
+        <h3>Important Questions</h3>
+
+        <ul>
+            <li>Who was assigned the IP address?</li>
+            <li>At what exact date and time?</li>
+            <li>Which subscriber/session was associated with it?</li>
+            <li>What destination IP was contacted?</li>
+            <li>Which destination port was used?</li>
+            <li>Which protocol was recorded?</li>
+            <li>How much data was transferred?</li>
+        </ul>
+
+    </div>
+
+
+    <div class="topic">
+
+        <h2>6. Port & Protocol Analysis</h2>
+
+        <p>
+            Network ports are logical endpoints used by applications and
+            services. Protocol information can help understand the type of
+            network communication recorded.
+        </p>
+
+        <table>
+
+            <tr>
+                <th>Protocol</th>
+                <th>General Purpose</th>
+            </tr>
+
+            <tr>
+                <td>TCP</td>
+                <td>Connection-oriented communication</td>
+            </tr>
+
+            <tr>
+                <td>UDP</td>
+                <td>Connectionless communication</td>
+            </tr>
+
+            <tr>
+                <td>HTTP</td>
+                <td>Web communication</td>
+            </tr>
+
+            <tr>
+                <td>HTTPS</td>
+                <td>Encrypted web communication</td>
+            </tr>
+
+            <tr>
+                <td>DNS</td>
+                <td>Domain name resolution</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+
+    <div class="topic">
+
+        <h2>7. NAT / CGNAT Concept</h2>
+
+        <p>
+            Multiple users can sometimes share a public IPv4 address through
+            Network Address Translation (NAT) or Carrier-Grade NAT (CGNAT).
+        </p>
+
+        <div class="example">
+
+            <strong>Important:</strong>
+
+            When investigating shared public IP addresses, timestamp,
+            source-port information and provider records may be important for
+            distinguishing different subscribers or sessions.
+
+        </div>
+
+    </div>
+
+
+    <div class="topic">
+
+        <h2>8. Upload & Download Analysis</h2>
+
+        <p>
+            IPDR records may contain traffic-volume information. Upload and
+            download volumes can be compared to understand the recorded
+            direction and amount of traffic.
+        </p>
+
+        <ul>
+            <li>Upload bytes</li>
+            <li>Download bytes</li>
+            <li>Total bytes</li>
+            <li>Session duration</li>
+            <li>Traffic direction</li>
+        </ul>
+
+        <div class="example">
+
+            <strong>Example:</strong>
+
+            <br><br>
+
+            Upload = 50 MB
+
+            <br>
+
+            Download = 500 MB
+
+            <br><br>
+
+            This indicates considerably more recorded downstream traffic than
+            upstream traffic during that session. It does not, by itself,
+            establish what content was transmitted.
+
+        </div>
+
+    </div>
+
+
+    <div class="topic">
+
+        <h2>9. IPDR Investigation Workflow</h2>
+
+        <div class="workflow">
+
+            <div class="step">
+                <strong>Step 1</strong>
+                Obtain provider records
+            </div>
+
+            <div class="step">
+                <strong>Step 2</strong>
+                Identify subscriber/session
+            </div>
+
+            <div class="step">
+                <strong>Step 3</strong>
+                Verify timestamp
+            </div>
+
+            <div class="step">
+                <strong>Step 4</strong>
+                Analyse IP addresses
+            </div>
+
+            <div class="step">
+                <strong>Step 5</strong>
+                Analyse ports/protocols
+            </div>
+
+            <div class="step">
+                <strong>Step 6</strong>
+                Correlate other evidence
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="topic">
+
+        <h2>10. Evidence Correlation</h2>
+
+        <p>
+            Network records should normally be analysed together with other
+            relevant evidence rather than relying on a single IP address or
+            port.
+        </p>
+
+        <ul>
+            <li>CDR</li>
+            <li>IPDR</li>
+            <li>Subscriber/KYC records</li>
+            <li>Device information</li>
+            <li>Application logs</li>
+            <li>Server logs</li>
+            <li>Transaction records</li>
+            <li>Digital forensic findings</li>
+        </ul>
+
+    </div>
+
+
+</div>
+
+
+<footer>
+
+    <p>
+        © 2026 Shantkumar | Cyber Crime Investigation Learning Project
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
